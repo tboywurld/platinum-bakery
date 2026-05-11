@@ -71,8 +71,10 @@ function Index() {
               addressRegion: "Anambra",
               addressCountry: "NG",
             },
+            telephone: "+2347039123273",
             servesCuisine: ["Bread", "Cakes", "Pastries"],
             priceRange: "$$",
+            sameAs: ["https://instagram.com/platinum.bakery"],
           }),
         }}
       />

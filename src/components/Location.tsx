@@ -1,5 +1,5 @@
-import { MapPin, Clock, Navigation } from "lucide-react";
-import { BAKERY } from "@/lib/bakery";
+import { MapPin, Clock, Navigation, Phone, Instagram } from "lucide-react";
+import { BAKERY, telLink } from "@/lib/bakery";
 
 export function Location() {
   const mapQuery = encodeURIComponent(BAKERY.address);
@@ -54,6 +54,28 @@ export function Location() {
                   <p className="mt-1 text-sm text-muted-foreground">
                     Fresh bread baked every morning. Same-day orders welcome.
                   </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
+              <div className="flex items-start gap-3">
+                <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-warm text-gold-foreground shadow-gold">
+                  <Phone className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-lg font-semibold">Call or WhatsApp</h3>
+                  <a href={telLink} className="mt-1 block text-sm text-foreground/80 hover:text-gold">
+                    {BAKERY.phoneDisplay}
+                  </a>
+                  <a
+                    href={BAKERY.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 inline-flex items-center gap-1.5 text-sm text-foreground/80 hover:text-gold"
+                  >
+                    <Instagram className="h-4 w-4" /> @{BAKERY.instagram}
+                  </a>
                 </div>
               </div>
             </div>
